@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <burddelivery>
+                <active>0</active>
+                <title>Burd Delivery</title>
+                <name>I aften mellem kl. 18:00-22:00.</name>
+                <namepartial>Hvad haves på lager leveres i aften mellem kl. 18:00-22:00, resten afsendes samme dag som modtages på lager.</namepartial>
+                <namedelay>Leveres %deliverydate% mellem kl. 18:00-22:00.</namedelay>
+                <namedelaypartial>Hvad haves på lager leveres %deliverydate% mellem kl. 18:00-22:00, resten afsendes samme dag som modtages på lager.</namedelaypartial>
+                <namebackorder>Leveres samme dag som modtages på lager mellem kl. 18:00-22:00.</namebackorder>
+                <shipping_cost>0</shipping_cost>
+                <sallowspecific>0</sallowspecific>
+                <maxtotalweight>20</maxtotalweight>
+                <maxperitemweight>20</maxperitemweight>
+                <sort_order>-100</sort_order>
+                <cut_off_time_east>12:30</cut_off_time_east>
+                <cut_off_time_east_delay>0</cut_off_time_east_delay>
+                <cut_off_time_west>12:30</cut_off_time_west>
+                <cut_off_time_west_delay>0</cut_off_time_west_delay>
+                <cut_off_time_mid>12:30</cut_off_time_mid>
+                <cut_off_time_mid_delay>0</cut_off_time_mid_delay>
+                <allowbackorderdelivery>1</allowbackorderdelivery>                
+                <model>BurdDelivery\BurdDeliveryShippingMethod\Model\Carrier\Burddelivery</model>
+            </burddelivery>
+        </carriers>
+    </default>
+</config>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="burddelivery" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Burd Delivery</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="apiBurdUsername" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Burd API username</label>
+                </field>
+
+                <field id="apiBurdPassword" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Burd API password</label>
+                </field>
+                <field  id="allowbackorderdelivery" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Allow backorder</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="maxtotalweight" translate="label" type="text" sortOrder="41" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Max total order weight</label>
+                </field>
+                <field id="maxperitemweight" translate="label" type="text" sortOrder="42" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Max item weight</label>
+                </field>               
+                <field id="cut_off_time_east" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Cut off time east</label>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="cut_off_time_east_delay" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Cut off time east delay</label>
+                    <can_be_empty>0</can_be_empty>
+                </field>
+                <field id="cut_off_time_west" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Cut off time west</label>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="cut_off_time_west_delay" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Cut off time west delay</label>
+                    <can_be_empty>0</can_be_empty>
+                </field>
+                <field id="cut_off_time_mid" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Cut off time mid</label>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="cut_off_time_mid_delay" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Cut off time mid delay</label>
+                    <can_be_empty>0</can_be_empty>
+                </field>
+                <field id="free_shipping_amount" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Free shipping if the cart contains over or equal the specificed amount, leave empty if not in use</label>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Title</label>
+                </field>
+                <field id="name" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Method Name Today</label>
+                </field>
+                <field id="namepartial" translate="label" type="text" sortOrder="141" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Method Name Today Partial</label>
+                </field>
+                <field id="namedelay" translate="label" type="text" sortOrder="142" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Method Name Delay</label>
+                </field>
+                <field id="namedelaypartial" translate="label" type="text" sortOrder="143" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Method Name Delay Partial</label>
+                </field>
+                <field id="namebackorder" translate="label" type="text" sortOrder="144" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Method Name Backorder</label>
+                </field>
+                <field id="shipping_cost" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="0" >
+                    <label>Shipping Cost</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="sallowspecific" translate="label" type="select" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Ship to Applicable Countries</label>
+                    <frontend_class>shipping-applicable-country</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Ship to Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="showmethod" translate="label" type="select" sortOrder="180" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Show Method if Not Applicable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <frontend_class>shipping-skip-hide</frontend_class>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
