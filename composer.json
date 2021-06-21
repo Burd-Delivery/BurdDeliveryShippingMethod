@@ -28,6 +28,5 @@
         "psr-4": {
             "BurdDelivery\\BurdDeliveryShippingMethod\\": ""
         }
-    },
-    "version": "1.0.1"
+    }
 }
