@@ -1,6 +1,6 @@
 <?php
 
-namespace BurdDelivery\BurdDeliveryShippingMethod\APIClient;
+namespace BurdDelivery\BurdDeliveryShippingMethod\ApiClient;
 
 /**
  * Class APISettings

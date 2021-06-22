@@ -1,5 +1,5 @@
 <?php
-namespace BurdDelivery\BurdDeliveryShippingMethod\APIClient;
+namespace BurdDelivery\BurdDeliveryShippingMethod\ApiClient;
 
 use Exception;
 
@@ -98,7 +98,7 @@ class APIClient {
 	public function execute() {
 
 		// append versions to the REQUEST.
-		$this->endpoint = $this->base_url.$this->endpoint . "&magento_version=2&plugin_version=1.0&platform=magento";
+		$this->endpoint = $this->base_url.$this->endpoint . "&magento_version=2&plugin_version=1.1&platform=magento";
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
 			CURLOPT_URL => $this->endpoint,

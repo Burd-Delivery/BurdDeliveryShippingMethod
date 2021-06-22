@@ -4,8 +4,8 @@ namespace BurdDelivery\BurdDeliveryShippingMethod\Model;
 
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Store\Model\ScopeInterface;
-use BurdDelivery\BurdDeliveryShippingMethod\APIClient\APIClient;
-use BurdDelivery\BurdDeliveryShippingMethod\APIClient\APISettings;
+use BurdDelivery\BurdDeliveryShippingMethod\ApiClient\APIClient;
+use BurdDelivery\BurdDeliveryShippingMethod\ApiClient\APISettings;
 // use Psr\Log\LoggerInterface;
 
 /**

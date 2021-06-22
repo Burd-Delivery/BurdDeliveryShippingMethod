@@ -6,8 +6,8 @@ use DateTime;
 use Exception;
 use BurdDelivery\BurdDeliveryShippingMethod\Helper\CutOffTimeHelper;
 use BurdDelivery\BurdDeliveryShippingMethod\Helper\MonthHelper;
-use BurdDelivery\BurdDeliveryShippingMethod\APIClient\APIClient;
-use BurdDelivery\BurdDeliveryShippingMethod\APIClient\APISettings;
+use BurdDelivery\BurdDeliveryShippingMethod\ApiClient\APIClient;
+use BurdDelivery\BurdDeliveryShippingMethod\ApiClient\APISettings;
 use Magento\Quote\Model\Quote\Address\RateRequest;
 use Magento\Shipping\Model\Carrier\AbstractCarrier;
 use Magento\Shipping\Model\Carrier\CarrierInterface;
@@ -138,6 +138,7 @@ class Burddelivery extends AbstractCarrier implements CarrierInterface
 	 */
 	public function deliveryDates()
 	{
+		$this->_logger->info("Burd Delivery: Creating delivery dates client.");
 		$apiClient = new APIClient(new APISettings($this->getConfigData('apiBurdUsername'), $this->getConfigData('apiBurdPassword')));
 		$apiClient->setBaseUrl("https://productionburdapi.azurewebsites.net");
 		$apiClient->setEndPoint("/v1/DeliveryDates?take=5");
